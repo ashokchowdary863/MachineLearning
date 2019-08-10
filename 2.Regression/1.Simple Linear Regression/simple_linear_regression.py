@@ -34,6 +34,8 @@ regressor.fit(X_train,Y_train)
 
 #Predicting the test set results
 Y_pred = regressor.predict(X_test)
+from sklearn.metrics import r2_score
+print(f"Prediction Accuracy : {r2_score(Y_pred,Y_test)}")
 
 #Visualising the training set results
 plt.scatter(X_train,Y_train,color = 'red')
